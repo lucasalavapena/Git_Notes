@@ -12,7 +12,11 @@ To add files to git use either:
 git add filename.fileextension
 ```
 
-or add all files which have been modified since
+or add all tracked files which have been modified since the last commit
+```
+git add -u
+```
+or all files in the directory
 
 ```
 git add .
@@ -35,7 +39,7 @@ log.txt
 
 Then the files in the /dir2 folder are ignored along with the log.txt file and all pdf documents
 
-## Git branch
+## Git branch relate
 
 Create branch
 
@@ -49,13 +53,12 @@ Switch to specific branch
 git checkout branchname
 ```
 
-## Touch
-
-Create file using unix command
-
+Create and switch to that branch in one command by using
 ```
-touch name.fileextension
+git checkout -b branchname
 ```
+
+
 ## Git Merge
 ```
 git merge branchname
@@ -69,4 +72,19 @@ git remote add origin url
 ```
 git push -u origin master
 ```
+
+## Git Workspace
+Rather than cloning a repo to work on a separate branch at the same time (e.g. for running tests on a PR), one can use git worktree, which shares resources between the worktrees.
+
+```
+git worktree add ../worktree-dir branch```
+```
+
+## TODO
+git switch
+git checkout --theirs path
+
+
+
+
 
