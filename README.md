@@ -52,16 +52,30 @@ Switch to specific branch
 ```
 git checkout branchname
 ```
+or in Git 2.23+
+```
+git switch branchname
+```
+git checkout is a sort of swiss army knife tool, now its functionality can be done with separate functions such as `git restore` and `git switch`
+
 
 Create and switch to that branch in one command by using
 ```
 git checkout -b branchname
 ```
 
-
 ## Git Merge
 ```
 git merge branchname
+```
+### Useful commons for conflicts
+
+To fix a conflict in which you know which change to accept one can use on of the following commands:
+```
+git checkout --theirs path
+```
+```
+git checkout --ours path
 ```
 
 ## Git Remote
@@ -77,12 +91,20 @@ git push -u origin master
 Rather than cloning a repo to work on a separate branch at the same time (e.g. for running tests on a PR), one can use git worktree, which shares resources between the worktrees.
 
 ```
-git worktree add ../worktree-dir branch```
+git worktree add ../worktree-dir branch
 ```
 
-## TODO
-git switch
-git checkout --theirs path
+# Git restoring related 
+
+To restore a file to the HEAD version
+```
+git restore path
+```
+In the past (prior to 2.23), one would use
+```
+git checkout -- path
+```
+
 
 
 
