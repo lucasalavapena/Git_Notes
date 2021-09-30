@@ -105,6 +105,11 @@ In the past (prior to 2.23), one would use
 git checkout -- path
 ```
 
+# Todo
+
+* revert vs reset
+* cherry-pick
+
 
 
 
