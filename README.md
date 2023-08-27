@@ -109,6 +109,7 @@ git checkout -- path
 
 * revert vs reset
 * cherry-pick
+* git rebase (including interactive)
 
 
 
